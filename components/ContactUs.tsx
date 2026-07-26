@@ -147,7 +147,7 @@ export default function ContactUs() {
               <div>
                 <p className="text-xs text-cream/60 mb-1">Phone</p>
                 <a
-                  href="tel:+213556453492"
+                  href="tel:+2130000000000"
                   className="font-display italic text-lg text-cream hover:text-blush transition-colors"
                 >
                   +213 00 00 00000
