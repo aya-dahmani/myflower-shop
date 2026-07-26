@@ -150,7 +150,7 @@ export default function ContactUs() {
                   href="tel:+213556453492"
                   className="font-display italic text-lg text-cream hover:text-blush transition-colors"
                 >
-                  +213 556 453 492
+                  +213 00 00 00000
                 </a>
               </div>
             </div>
