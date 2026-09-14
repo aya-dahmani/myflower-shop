@@ -41,7 +41,12 @@ export default function BestSellers({ products }: { products: Product[] }) {
         </h2>
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+      {products.length === 0 ? (
+        <p className="text-ivy/50 text-sm py-10">
+          No best sellers yet. Feature a product from the seller dashboard.
+        </p>
+      ) : (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {products.map((product) => (
           <div key={product.slug} className="group">
             <Link
@@ -106,7 +111,8 @@ export default function BestSellers({ products }: { products: Product[] }) {
             <p className="text-ivy/70 text-sm">${product.price}</p>
           </div>
         ))}
-      </div>
+        </div>
+      )}
     </section>
   );
 }

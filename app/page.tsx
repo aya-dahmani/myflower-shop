@@ -6,6 +6,7 @@ import WhyChooseUs from "@/components/WhyChooseUs";
 import ContactUs from "@/components/ContactUs";
 import Footer from "@/components/Footer";
 import { createClient } from "@/lib/supabase/server";
+import { fallbackBestSellers } from "@/lib/products";
 
 export default async function Home() {
   const supabase = await createClient();
@@ -21,7 +22,7 @@ export default async function Home() {
       <Navbar />
       <Hero />
       <Categories />
-      <BestSellers products={products ?? []} />
+      <BestSellers products={products?.length ? products : fallbackBestSellers} />
       <WhyChooseUs />
       <ContactUs />
       <Footer />

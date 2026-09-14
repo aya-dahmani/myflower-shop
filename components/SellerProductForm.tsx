@@ -72,6 +72,7 @@ export default function SellerProductForm({ onProductAdded }: { onProductAdded: 
       description,
       details: details.split(",").map((d) => d.trim()).filter(Boolean),
       category,
+      is_featured: true,
     });
 
     if (insertError) {
